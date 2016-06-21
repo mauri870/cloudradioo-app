@@ -19,6 +19,7 @@ Vue.filter('reverse', reverse);
 
 Vue.config.debug = true;
 
+/* eslint-disable no-new */
 var app = new Vue({
   store,
 
