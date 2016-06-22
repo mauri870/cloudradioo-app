@@ -1,4 +1,4 @@
-![cloudradioo](https://i.imgsafe.org/afc8537f2e.png)
+![cloudradioo](http://i.imgur.com/i19ScAE.png)
 
 Cloudradioo App
 ===============
@@ -29,8 +29,7 @@ store.dispatch('SET_API_URL', 'http://cloudradioo.com/');
 Then compile the assets and start the app:
 
 ```
-npm install
-npm start
+npm i && npm start
 ```
 
 ### Creating a release
