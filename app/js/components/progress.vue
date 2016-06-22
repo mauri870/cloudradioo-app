@@ -8,7 +8,6 @@
 </template>
 
 <script type="text/babel">
-
   import {seekTrack} from '../store/actions';
 
   export default {
@@ -22,7 +21,7 @@
         seekTrack
       }
     },
-    methods: {
+    methods: {
       click(event) {
         let clientX = event.clientX;
         let progressWidth = document.querySelector('.progress-wrap').offsetWidth;
@@ -34,5 +33,4 @@
       }
     }
   };
-
 </script>
