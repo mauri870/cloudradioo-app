@@ -13,10 +13,16 @@ let notification = new Vue({
 
   methods: {
     songPlayed () {
-      this.notify(
-          `♫ ${this.currentTrack.title}`,
-          `By: ${this.currentTrack.username} on ${this.currentTrack.genre}`
-      );
+      let vm = this;
+      let oldTrackTitle = vm.currentTrack.title;
+      setTimeout(function () {
+        if (vm.$store.state.player.currentTrack.title === oldTrackTitle) {
+          vm.notify(
+              `♫ ${vm.currentTrack.title}`,
+              `By: ${vm.currentTrack.username} on ${vm.currentTrack.genre}`
+          );
+        }
+      }, 5000);
     },
 
     notify(title, body, silent = true, icon = require('../img/logo.png')) {
