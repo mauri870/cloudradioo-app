@@ -58,19 +58,8 @@ let player = new Vue({
     initAllTracks() {
       this.$http.get(this.apiUrl + 'api/songs', {filters: this.userFilters}).then(value => {
         store.dispatch('INIT_ALL_TRACKS', value.data);
-
-        // Is there an shared uri? Fetch the track and store them as currentTrack.
-        if (this.sharedTrack) {
-          this.$http.get(`http://api.soundcloud.com/tracks/${this.sharedTrack}?client_id=${this.apiKey}`).then(value => {
-            store.dispatch('INIT_SHARED_TRACK', value.data);
-            this.initPlayer();
-          }, error => {
-            window.location.href = document.querySelector('.base-uri').content;
-          });
-        } else {
-          store.dispatch('INIT_CURRENT_TRACK');
-          this.initPlayer();
-        }
+        store.dispatch('INIT_CURRENT_TRACK');
+        this.initPlayer();
       });
     },
 
