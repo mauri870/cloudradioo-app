@@ -9,7 +9,7 @@ This is the app version of cloudradioo, built with [electron](http://electron.at
 
 ## Installer
 
-Please go to the [release page](https://github.com/devfake/cloudradioo-app/releases) and get the latest version for your operation system
+Please go to the [release page](https://github.com/mauri870/cloudradioo-app/releases) and get the latest version for your operation system
 
 ## For developers 
 
