@@ -28,7 +28,7 @@
     "release": "gulp release --env=production"
   },
   "dependencies": {
-    "eslint": "^1.10.3",
+    "eslint": "^4.19.1",
     "eslint-loader": "^1.2.0"
   }
 }
